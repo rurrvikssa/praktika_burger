@@ -1,0 +1,635 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    transition: 0.5s;
+    line-height: 90%;
+}
+
+/* создаем контейнер */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.my-120 {
+    margin-top: 120px;
+}
+
+/* подключаем шрифты */
+@font-face {
+    src: url(../fonts/AASteticaRegular.otf);
+    font-family: "AAStetica";
+    font-weight: 400;
+}
+
+@font-face {
+    src: url(../fonts/AASteticaMedium.otf);
+    font-family: "AAStetica";
+    font-weight: 500;
+}
+
+/* header start */
+.header {
+    background-color: #E9DEE8;
+}
+
+header {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_content {
+    display: flex;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #C3A5C1;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+}
+
+.contacts {
+    display: flex;
+    gap: 10px;
+}
+
+.contact1 {
+    width: 144px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact2 {
+    width: 196px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact1 p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.contact1 h3 {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #000;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}
+
+.contact2 p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.contact2 a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #000;
+    text-decoration-thickness: 1px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    width: 80px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: #e4bbe1;
+}
+
+/* бургер-меню */
+#burger,
+[for=burger] {
+    display: none;
+}
+
+[for=burger] {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 30px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+[for=burger] span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #C3A5C1;
+    position: relative;
+    transition: 0.3s;
+}
+
+[for=burger] span::after,
+[for=burger] span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #C3A5C1;
+    transition: 0.3s;
+}
+
+[for=burger] span::before {
+    top: -8px;
+}
+
+[for=burger] span::after {
+    top: 8px;
+}
+
+#burger:checked~nav {
+    left: 0;
+}
+
+#burger:checked~label span {
+    background: transparent;
+}
+
+#burger:checked~label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#burger:checked~label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+header nav a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #C3A5C1;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+    [for=burger] {
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        background: #E9DEE8;
+        padding-top: 80px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: left 0.3s ease;
+    }
+
+    header nav a {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #C3A5C1;
+        font-size: 18px;
+    }
+
+    header nav a:hover {
+        background: #C3A5C1;
+        color: #fff;
+    }
+
+    .header_content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_content .icons {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.icon {
+    width: 80px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .icons {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* header end */
+
+.href {
+    display: flex;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.href a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #A1A1A1;
+}
+
+.href a:hover {
+    color: #B1BA3A;
+}
+
+.href span {
+    color: #545454;
+}
+
+.href p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #A1A1A1;
+}
+
+/* about start */
+.about-page {
+    padding: 60px 0;
+}
+
+.about-page h1 {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.legal-docs h2,
+.company-stats h2 {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.about-info p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #545454;
+    margin-bottom: 40px;
+}
+
+.about-features {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.feature {
+    flex: 1;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #F1F1F1;
+    text-align: center;
+}
+
+.feature i {
+    font-size: 32px;
+    color: #C3A5C1;
+    margin-bottom: 16px;
+}
+
+.feature h3 {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 24px;
+    color: #B1BA3A;
+    margin-bottom: 16px;
+}
+
+.feature p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 18px;
+    color: #545454;
+}
+
+.legal-docs {
+    margin-bottom: 60px;
+}
+
+.docs-grid {
+    display: flex;
+    gap: 32px;
+}
+
+.doc-item {
+    flex: 1;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #F1F1F1;
+    text-align: center;
+}
+
+.doc-item i {
+    font-size: 32px;
+    color: #C3A5C1;
+    margin-bottom: 16px;
+}
+
+.doc-item h3 {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.doc-item p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 18px;
+    color: #545454;
+    margin-bottom: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 20px;
+    background-color: #C3A5C1;
+    color: #000;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #B1BA3A;
+}
+
+.company-stats {
+    margin-bottom: 60px;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 32px;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #F1F1F1;
+    text-align: center;
+}
+
+.stat-item .number {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 48px;
+    color: #B1BA3A;
+    margin-bottom: 16px;
+}
+
+.stat-item p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 18px;
+    color: #545454;
+}
+
+/* about end */
+
+/* footer start */
+.footer {
+    background-color: #F1F1F1;
+    padding: 60px 0;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_content h2 {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 28px;
+    color: #A1A1A1;
+}
+
+/* footer end */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header_content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact1,
+    .contact2 {
+        width: 100%;
+    }
+
+    .about-features,
+    .docs-grid,
+    .stats-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature,
+    .doc-item,
+    .stat-item {
+        width: 100%;
+    }
+
+    .about-page h1 {
+        font-size: 36px;
+    }
+
+    .legal-docs h2,
+    .company-stats h2 {
+        font-size: 28px;
+    }
+
+    .about-info p {
+        font-size: 20px;
+    }
+
+    .feature h3,
+    .doc-item h3 {
+        font-size: 22px;
+    }
+
+    .feature p,
+    .doc-item p,
+    .stat-item p {
+        font-size: 16px;
+    }
+
+    .stat-item .number {
+        font-size: 40px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-page h1 {
+        font-size: 32px;
+    }
+
+    .legal-docs h2,
+    .company-stats h2 {
+        font-size: 24px;
+    }
+
+    .about-info p {
+        font-size: 18px;
+    }
+
+    .feature h3,
+    .doc-item h3 {
+        font-size: 20px;
+    }
+
+    .feature p,
+    .doc-item p,
+    .stat-item p {
+        font-size: 14px;
+    }
+
+    .stat-item .number {
+        font-size: 36px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+
+    .href {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .href a,
+    .href p {
+        font-size: 20px;
+    }
+}

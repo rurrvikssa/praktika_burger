@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лапочка - корзина</title>
+    <link rel="stylesheet" href="assets/css/bag.css">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="header">
+        <header class="container">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="assets/images/header/logo.png" alt="">
+                </div>
+            </a>
+
+            <input type="checkbox" id="burger">
+            <label for="burger">
+                <span></span>
+            </label>
+
+            <nav>
+                <a href="about.html">о нас</a>
+                <a href="contacts.html">контакты</a>
+                <a href="catalog.html">каталог</a>
+            </nav>
+
+            <div class="header_content">
+               
+
+                <div class="icons">
+                    <div class="icon">
+                        <img src="assets/images/header/icon1.png" alt="">
+                    </div>
+
+                    <a href="bag.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon2.png" alt="">
+                        </div>
+                    </a>
+
+                    <a href="account.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- header end -->
+
+    <div class="href container">
+        <a href="index.html">главная</a>
+        <p>/</p>
+        <a href=""><span>корзина</span></a>
+    </div>
+
+    <!-- bag start -->
+    <main class="cart-page">
+        <div class="container">
+            <h1>Корзина</h1>
+
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="assets/images/catalog/cat_img1.png" alt="">
+                        </div>
+                        <div class="item-info">
+                            <h3>сухой корм для кошек Grandorf Indoor</h3>
+                            <div class="item-price">985 ₽</div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">
+                            <div class="total-price">985 ₽</div>
+                            <button class="remove-item">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="assets/images/catalog/cat_img2.png" alt="Игрушка для кошек">
+                        </div>
+                        <div class="item-info">
+                            <h3>сухой корм для кошек SIRIUS</h3>
+                            <div class="item-price">1099 ₽</div>
+                            <div class="item-quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="2" min="1" max="10">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                        <div class="item-total">
+                            <div class="total-price">1099 ₽</div>
+                            <button class="remove-item">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Оформление заказа</h2>
+                    <div class="summary-item">
+                        <span>Товары (3)</span>
+                        <span>2 084 ₽</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Скидка</span>
+                        <span>- 340 ₽</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Доставка</span>
+                        <span>Бесплатно</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Итого</span>
+                        <span>1 744 ₽</span>
+                    </div>
+
+                    <div class="promo-code">
+                        <input type="text" placeholder="Промокод">
+                        <button class="btn">Применить</button>
+                    </div>
+
+                    <div class="delivery-options">
+                        <h3>Способ доставки</h3>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="standard" checked>
+                            <span>Стандартная доставка (1-3 дня)</span>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="express">
+                            <span>Экспресс доставка (до 24 часов)</span>
+                        </label>
+                    </div>
+
+                    <div class="payment-options">
+                        <h3>Способ оплаты</h3>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>Банковской картой</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="cash">
+                            <span>Наличными при получении</span>
+                        </label>
+                    </div>
+
+                    <button class="btn checkout-btn">
+                        Оформить заказ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- bag end -->
+
+    <!-- footer start -->
+    <div class="footer my-120">
+        <div class="footer_content container">
+            <h2>Рогожина Виктория 2025 год</h2>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        });
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                let href = this.href;
+                document.body.style.opacity = "0";
+                setTimeout(() => window.location.href = href, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лапочка - о нас</title>
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="header">
+        <header class="container">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="assets/images/header/logo.png" alt="">
+                </div>
+            </a>
+
+            <input type="checkbox" id="burger">
+            <label for="burger">
+                <span></span>
+            </label>
+
+            <nav>
+                <a href="about.html">о нас</a>
+                <a href="contacts.html">контакты</a>
+                <a href="catalog.html">каталог</a>
+            </nav>
+
+            <div class="header_content">
+
+
+                <div class="icons">
+                    <div class="icon">
+                        <img src="assets/images/header/icon1.png" alt="">
+                    </div>
+
+                    <a href="bag.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon2.png" alt="">
+                        </div>
+                    </a>
+
+                    <a href="account.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- header end -->
+
+    <div class="href container">
+        <a href="index.html">главная</a>
+        <p>/</p>
+        <a href="about.html"><span>о нас</span></a>
+    </div>
+
+    <!-- about start -->
+    <main class="about-page">
+        <div class="container">
+            <h1>О нас</h1>
+
+            <section class="about-info">
+                <p>Лапочка - это ваш надежный помощник в заботе о домашних питомцах. Мы работаем на рынке с 2010 года и
+                    за это время заслужили доверие тысяч клиентов по всей России.</p>
+
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>Любовь к животным</h3>
+                        <p>Мы сами являемся владельцами домашних питомцев и понимаем, как важно качественное питание и
+                            уход.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Качество товаров</h3>
+                        <p>Тщательно отбираем поставщиков и проверяем каждый товар перед продажей.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Надежность</h3>
+                        <p>Гарантируем безопасность и качество всех товаров в нашем магазине.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="legal-docs">
+                <h2>Юридическая информация</h2>
+                <div class="docs-grid">
+                    <div class="doc-item">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Политика конфиденциальности</h3>
+                        <p>Правила обработки и защиты персональных данных пользователей.</p>
+                        <a href="#" class="btn" download>
+                            <i class="fas fa-download"></i> Скачать
+                        </a>
+                    </div>
+                    <div class="doc-item">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Пользовательское соглашение</h3>
+                        <p>Правила использования сайта и условия совершения покупок.</p>
+                        <a href="#" class="btn" download>
+                            <i class="fas fa-download"></i> Скачать
+                        </a>
+                    </div>
+                    <div class="doc-item">
+                        <i class="fas fa-file-invoice"></i>
+                        <h3>Правила возврата</h3>
+                        <p>Условия возврата и обмена товаров.</p>
+                        <a href="#" class="btn" download>
+                            <i class="fas fa-download"></i> Скачать
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="company-stats">
+                <h2>Наши достижения</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="number">10+</span>
+                        <p>Лет на рынке</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">5000+</span>
+                        <p>Довольных клиентов</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">1000+</span>
+                        <p>Товаров в каталоге</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">24/7</span>
+                        <p>Поддержка клиентов</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- about end -->
+
+    <!-- footer start -->
+    <div class="footer my-120">
+        <div class="footer_content container">
+            <h2>Рогожина Виктория 2025 год</h2>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        });
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                let href = this.href;
+                document.body.style.opacity = "0";
+                setTimeout(() => window.location.href = href, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

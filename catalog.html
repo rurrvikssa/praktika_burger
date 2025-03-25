@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лапочка - каталог</title>
+    <link rel="stylesheet" href="assets/css/catalog.css">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="header">
+        <header class="container">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="assets/images/header/logo.png" alt="">
+                </div>
+            </a>
+
+            <input type="checkbox" id="burger">
+            <label for="burger">
+                <span></span>
+            </label>
+
+            <nav>
+                <a href="about.html">о нас</a>
+                <a href="contacts.html">контакты</a>
+                <a href="catalog.html">каталог</a>
+            </nav>
+
+            <div class="header_content">
+
+
+                <div class="icons">
+                    <div class="icon">
+                        <img src="assets/images/header/icon1.png" alt="">
+                    </div>
+
+                    <a href="bag.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon2.png" alt="">
+                        </div>
+                    </a>
+
+                    <a href="account.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- header end -->
+
+    <div class="href container">
+        <a href="index.html">главная</a>
+        <p>/</p>
+        <a href=""><span>каталог</span></a>
+    </div>
+
+    <!-- catalog start -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog__inner">
+                <h3 class="catalog__title">Каталог</h3>
+                <div class="catalog__content">
+                    <aside class="filters-sidebar">
+                        <div class="filter-section">
+                            <h3>Категории</h3>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="food">
+                                    Корма
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="toys">
+                                    Игрушки
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="accessories">
+                                    Аксессуары
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="care">
+                                    Уход
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>Цена</h3>
+                            <div class="price-range">
+                                <input type="range" min="0" max="10000" step="100" class="price-slider">
+                                <div class="price-inputs">
+                                    <input type="number" placeholder="От" class="price-input">
+                                    <input type="number" placeholder="До" class="price-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>Бренды</h3>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="brand" value="royal-canin">
+                                    Royal Canin
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="brand" value="hills">
+                                    Hill's
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="brand" value="purina">
+                                    Purina
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>Для животных</h3>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="animal" value="dogs">
+                                    Собаки
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="animal" value="cats">
+                                    Кошки
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="animal" value="birds">
+                                    Птицы
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="animal" value="fish">
+                                    Рыбки
+                                </label>
+                            </div>
+                        </div>
+
+                        <button class="btn apply-filters">Применить фильтры</button>
+                    </aside>
+                    <div class="catalog__row">
+                        <a href="card.html">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="assets/images/catalog/cat_img1.png" alt="">
+                                </div>
+                                <div class="card__content">
+                                    <p class="card__name">сухой корм для кошек Grandorf Indoor</p>
+                                    <p class="card__desc">для взрослых кошек со вкусом белой рыбы и индейки 400 г</p>
+                                    <p class="card__price">985 ₽</p>
+                                    <div class="card__actions">
+                                        <button class="card__btn">добавить в корзину</button>
+                                        <div class="like">
+                                            <img src="assets/images/popular/heart.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <div class="card">
+                            <div class="card__img">
+                                <img src="assets/images/catalog/cat_img2.png" alt="">
+                                <div class="catalog_promotion">
+                                    <p>-20%</p>
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <p class="card__name">сухой корм для кошек <br> SIRIUS</p>
+                                <p class="card__desc">для взрослых кошек со вкусом лосося и риса 1,5 кг</p>
+                                <p class="card__price">1099 ₽</p>
+                                <div class="card__actions">
+                                    <button class="card__btn">добавить в корзину</button>
+                                    <div class="like">
+                                        <img src="assets/images/popular/heart.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__img">
+                                <img src="assets/images/catalog/cat_img3.png" alt="">
+                                <div class="catalog_promotion">
+                                    <p>-10%</p>
+                                </div>
+                            </div>
+                            <div class="card__content">
+                                <p class="card__name">влажный корм для собак PURINA ONE</p>
+                                <p class="card__desc">для взрослых собак со вкусом кролика и моркови 85 г</p>
+                                <p class="card__price">79 ₽ за 1 шт.</p>
+                                <div class="card__actions">
+                                    <button class="card__btn">добавить в корзину</button>
+                                    <div class="like">
+                                        <img src="assets/images/popular/heart.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__img">
+                                <img src="assets/images/catalog/cat_img7.png" alt="">
+                            </div>
+                            <div class="card__content">
+                                <p class="card__name">корм для волнистых попугаев Rio</p>
+                                <p class="card__desc">для волнистых попугайчиков 500 г</p>
+                                <p class="card__price">225 ₽</p>
+                                <div class="card__actions">
+                                    <button class="card__btn">добавить в корзину</button>
+                                    <div class="like">
+                                        <img src="assets/images/popular/heart.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__img">
+                                <img src="assets/images/catalog/cat_img8.png" alt="">
+                            </div>
+                            <div class="card__content">
+                                <p class="card__name">игрушка для собак <br> M-PETS</p>
+                                <p class="card__desc">"косточка" 30 см</p>
+                                <p class="card__price">320 ₽</p>
+                                <div class="card__actions">
+                                    <button class="card__btn">добавить в корзину</button>
+                                    <div class="like">
+                                        <img src="assets/images/popular/heart.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card__img">
+                                <img src="assets/images/catalog/cat_img9.png" alt="">
+                            </div>
+                            <div class="card__content">
+                                <p class="card__name">Little One корм для хомяков</p>
+                                <p class="card__desc">полнорационный корм с добавлением витаминов 400 г</p>
+                                <p class="card__price">225 ₽</p>
+                                <div class="card__actions">
+                                    <button class="card__btn">добавить в корзину</button>
+                                    <div class="like">
+                                        <img src="assets/images/popular/heart.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- catalog end -->
+
+    <!-- footer start -->
+    <div class="footer my-120">
+        <div class="footer_content container">
+            <h2>Рогожина Виктория 2025 год</h2>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        });
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                let href = this.href;
+                document.body.style.opacity = "0";
+                setTimeout(() => window.location.href = href, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

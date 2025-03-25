@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лапочка - личный кабинет</title>
+    <link rel="stylesheet" href="assets/css/account.css">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="header">
+        <header class="container">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="assets/images/header/logo.png" alt="">
+                </div>
+            </a>
+
+            <input type="checkbox" id="burger">
+            <label for="burger">
+                <span></span>
+            </label>
+
+            <nav>
+                <a href="about.html">о нас</a>
+                <a href="contacts.html">контакты</a>
+                <a href="catalog.html">каталог</a>
+            </nav>
+
+            <div class="header_content">
+
+
+                <div class="icons">
+                    <div class="icon">
+                        <img src="assets/images/header/icon1.png" alt="">
+                    </div>
+
+                    <a href="bag.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon2.png" alt="">
+                        </div>
+                    </a>
+
+                    <a href="account.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- header end -->
+
+    <div class="href container">
+        <a href="index.html">главная</a>
+        <p>/</p>
+        <a href=""><span>личный кабинет</span></a>
+    </div>
+
+    <!-- account start -->
+    <div class="account container">
+        <h2>привет, Пользователь!</h2>
+
+        <div class="account_content_up">
+            <div class="account_left_content">
+                <div class="left_content_area1">
+                    <h3>личные данные</h3>
+                    <img src="assets/images/account/icon.png" alt="">
+                </div>
+
+                <div class="left_content_area">
+                    <h3>история заказов</h3>
+                    <img src="assets/images/account/arrow_down.png" alt="">
+                </div>
+            </div>
+
+            <div class="account_right_content">
+                <a href="#">мои способы оплаты</a>
+                <a href="#">мои адреса доставки</a>
+                <a href="#">мои отзывы</a>
+                <a href="#">мои промокоды</a>
+            </div>
+        </div>
+
+        <div class="account_content_down">
+            <div class="order">
+                <img src="assets/images/account/acc_img1.png" alt="">
+                <img src="assets/images/account/acc_img2.png" alt="">
+                <img src="assets/images/account/acc_img3.png" alt="">
+
+                <div class="plus">
+                    <p>+ 2</p>
+                </div>
+            </div>
+
+            <div class="order">
+                <img src="assets/images/account/acc_img4.png" alt="">
+                <img src="assets/images/account/acc_img5.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- account end -->
+
+    <!-- footer start -->
+    <div class="footer my-120">
+        <div class="footer_content container">
+            <h2>Рогожина Виктория 2025 год</h2>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        });
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                let href = this.href;
+                document.body.style.opacity = "0";
+                setTimeout(() => window.location.href = href, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

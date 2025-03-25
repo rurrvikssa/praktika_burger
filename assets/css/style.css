@@ -1,0 +1,1219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    transition: 0.5s;
+    line-height: 90%;
+}
+
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+
+/* создаем контейнер */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.my-120 {
+    margin-top: 120px;
+}
+
+/* подключаем шрифты */
+@font-face {
+    src: url(../fonts/AASteticaRegular.otf);
+    font-family: "AAStetica";
+    font-weight: 400;
+}
+
+@font-face {
+    src: url(../fonts/AASteticaMedium.otf);
+    font-family: "AAStetica";
+    font-weight: 500;
+}
+
+/* header and banner start */
+.banner {
+    background-image: url(../images/banner/banner_img.png);
+    width: 1920px;
+    height: 1000px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+header {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #C3A5C1;
+}
+
+nav a:hover {
+    transform: translateY(-5px);
+}
+
+.header_content {
+    display: flex;
+    gap: 20px;
+}
+
+.contacts {
+    display: flex;
+    gap: 10px;
+}
+
+.contact1 {
+    width: 144px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact2 {
+    width: 196px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact1 p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.contact1 h3 {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #000;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}
+
+.contact2 p {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.contact2 a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #000;
+    text-decoration-thickness: 1px;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    width: 80px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: #e4bbe1;
+}
+
+/* бургер-меню */
+#burger,
+[for=burger] {
+    display: none;
+}
+
+[for=burger] {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 30px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+[for=burger] span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #C3A5C1;
+    position: relative;
+    transition: 0.3s;
+}
+
+[for=burger] span::after,
+[for=burger] span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #C3A5C1;
+    transition: 0.3s;
+}
+
+[for=burger] span::before {
+    top: -8px;
+}
+
+[for=burger] span::after {
+    top: 8px;
+}
+
+#burger:checked~nav {
+    left: 0;
+}
+
+#burger:checked~label span {
+    background: transparent;
+}
+
+#burger:checked~label span::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#burger:checked~label span::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+header nav a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 20px;
+    color: #C3A5C1;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+    [for=burger] {
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        background: #E9DEE8;
+        padding-top: 80px;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: left 0.3s ease;
+    }
+
+    header nav a {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #C3A5C1;
+        font-size: 18px;
+    }
+
+    header nav a:hover {
+        background: #C3A5C1;
+        color: #fff;
+    }
+
+    .header_content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_content .icons {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.icon {
+    width: 80px;
+    height: 72px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .icons {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.banner_info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 108px;
+}
+
+.banner_pic {
+    position: absolute;
+    left: 632px;
+}
+
+.banner_text {
+    position: relative;
+    width: 472px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.banner_text h1 {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 64px;
+    color: #000;
+}
+
+.banner_btn {
+    width: 398px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 24px;
+    border: 2px solid #E1BADF;
+    background-color: #E1BADF;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+}
+
+.banner_btn:hover {
+    cursor: pointer;
+    border: 2px solid #D5DB84;
+    background-color: #D5DB84;
+}
+
+/* header and banner end */
+
+/* popular start */
+.title {
+    width: 1400px;
+    height: 85px;
+    padding: 0 32px;
+    border-radius: 24px;
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title1 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.title1 h2 {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+}
+
+.title2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title2 a {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.title2 a:hover {
+    color: #C3A5C1;
+}
+
+.popular_cards {
+    position: relative;
+    display: flex;
+    gap: 64px;
+    align-items: center;
+}
+
+.pop_card {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.popcard_part1 {
+    position: relative;
+    width: 424px;
+    height: 348px;
+    border-radius: 48px;
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop_fire {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+}
+
+.popcard_part2 {
+    padding: 32px 0 0 32px;
+    width: 424px;
+    height: 200px;
+    border-radius: 42px;
+    border: 2px solid #F1F1F1;
+    background-color: transparent;
+}
+
+.popcard_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.popcard_text h3 {
+    width: 285px;
+    height: 44px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.popcard_text h4 {
+    margin-top: 16px;
+    width: 309px;
+    height: 28px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 16px;
+    color: #545454;
+}
+
+.popcard_part2 p {
+    margin-top: 16px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.popcard_part3 {
+    display: flex;
+    gap: 24px;
+}
+
+.pop_btn {
+    width: 304px;
+    height: 58px;
+    border-radius: 18px;
+    border: none;
+    background-color: rgba(195, 165, 193, 0.37);
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.pop_btn:hover {
+    cursor: pointer;
+    background-color: #E1BADF;
+}
+
+.like {
+    width: 96px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background-color: rgba(195, 165, 193, 0.37);
+    cursor: pointer;
+}
+
+.arrow_right {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #E1BADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -40px
+}
+
+.arrow_right:hover {
+    cursor: pointer;
+    background-color: #D5DB84;
+}
+
+/* popular end */
+
+/* promotions start */
+.promotions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.prom_leftcontent {
+    position: relative;
+    width: 627px;
+    height: 800px;
+    border-radius: 64px;
+    background-color: #E9DEE8;
+    padding: 52px 97px;
+}
+
+.prleft_content {
+    display: flex;
+    flex-direction: column;
+    gap: 41px;
+}
+
+.prom_img1 {
+    width: 433px;
+    height: 526px;
+}
+
+.prleft_content h2 {
+    margin-left: 51px;
+    width: 344px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 48px;
+    color: #000;
+}
+
+.promotion1 {
+    position: absolute;
+    bottom: 507px;
+    left: 380px;
+    width: 135px;
+    height: 80px;
+    border-radius: 16px;
+    background-color: #FFA159;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotion1 p {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 48px;
+    color: #000;
+}
+
+.arrow_right1 {
+    position: absolute;
+    bottom: 360px;
+    right: 32px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #E1BADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow_right1:hover {
+    cursor: pointer;
+    background-color: #D5DB84;
+}
+
+.prom_rightcontent {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.prom_up {
+    position: relative;
+    width: 709px;
+    height: 368px;
+    border-radius: 62px;
+    background-color: #EFF1D8;
+    padding: 61px 76px 28px 75px;
+}
+
+.prom_img2 {
+    width: 198px;
+    height: 279px;
+}
+
+.prom_img {
+    display: flex;
+    gap: 16px;
+}
+
+.prom_img h2 {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 48px;
+    color: #000;
+    margin-top: 62px;
+
+}
+
+.promotion2 {
+    position: absolute;
+    top: 18px;
+    left: 209px;
+    width: 135px;
+    height: 80px;
+    border-radius: 16px;
+    background-color: #FFA159;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotion2 p {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 48px;
+    color: #000;
+}
+
+.arrow_right2 {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #E1BADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow_right2:hover {
+    cursor: pointer;
+    background-color: #D5DB84;
+}
+
+.cat_dog_cards {
+    display: flex;
+    gap: 42px;
+}
+
+.new_cat {
+    position: relative;
+    width: 334px;
+    height: 390px;
+    border-radius: 62px;
+    background-color: #FAD8C7;
+}
+
+.new_cat_content {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 198px;
+}
+
+.cat_img {
+    position: absolute;
+    bottom: 0px;
+    left: 33px;
+}
+
+.new_cat_content h3 {
+    width: 260px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+}
+
+.prom_btn {
+    width: 159px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 18px;
+    border: 2px solid #E1BADF;
+    background-color: #E1BADF;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+    z-index: 5;
+}
+
+.prom_btn:hover {
+    cursor: pointer;
+    border: 2px solid #D5DB84;
+    background-color: #D5DB84;
+}
+
+.new_dog {
+    position: relative;
+    width: 334px;
+    height: 390px;
+    border-radius: 62px;
+    background-color: #FAD8C7;
+}
+
+.new_dog_content {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 198px;
+}
+
+.dog_img {
+    position: absolute;
+    bottom: 0px;
+    left: 14px;
+}
+
+.new_dog_content h3 {
+    width: 260px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+}
+
+/* promotions end */
+
+/* catalog start */
+.catalog_search_sort {
+    margin-top: 48px;
+    display: flex;
+    gap: 24px;
+}
+
+.catalog_searchbar {
+    position: relative;
+}
+
+.loupe {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cat_search_input {
+    width: 912px;
+    height: 54px;
+    border-radius: 20px;
+    border: 2px solid #F1F1F1;
+    background-color: #F1F1F1;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #A1A1A1;
+    padding: 16px 0 16px 70px;
+}
+
+.cat_search_input:hover {
+    color: #000;
+}
+
+.catalog_sorting {
+    display: flex;
+    gap: 24px;
+}
+
+.filter_btn {
+    width: 176.38px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    border: 3px solid #F1F1F1;
+    background-color: #F1F1F1;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #A1A1A1;
+}
+
+.filter_btn:hover {
+    cursor: pointer;
+    border: 3px solid #F1F1F1;
+    background-color: transparent;
+    color: #D5DB84;
+}
+
+.sort_btn {
+    width: 262px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    border: 3px solid #F1F1F1;
+    background-color: #F1F1F1;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #A1A1A1;
+}
+
+.sort_btn:hover {
+    cursor: pointer;
+    border: 3px solid #F1F1F1;
+    background-color: transparent;
+    color: #D5DB84;
+}
+
+.catalog_cards {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+.catalog_cards_row1 {
+    display: flex;
+    gap: 64px;
+}
+
+.catalog_cards_row2 {
+    display: flex;
+    gap: 64px;
+}
+
+
+.catalog_card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card_part1 {
+    position: relative;
+    width: 424px;
+    height: 348px;
+    border-radius: 48px;
+    background-color: #F1F1F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_part2 {
+    padding: 32px 0 0 32px;
+    width: 424px;
+    height: 200px;
+    border-radius: 42px;
+    border: 2px solid #F1F1F1;
+    background-color: transparent;
+}
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_text h3 {
+    width: 285px;
+    height: 44px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.card_text h4 {
+    margin-top: 16px;
+    width: 309px;
+    height: 28px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 16px;
+    color: #545454;
+}
+
+.card_part2 p {
+    margin-top: 16px;
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.card_part3 {
+    display: flex;
+    gap: 24px;
+}
+
+.catalog_btn {
+    width: 304px;
+    height: 58px;
+    border-radius: 18px;
+    border: none;
+    background-color: rgba(195, 165, 193, 0.37);
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 24px;
+    color: #000;
+}
+
+.catalog_btn:hover {
+    cursor: pointer;
+    background-color: #E1BADF;
+}
+
+.catalog_promotion {
+    position: absolute;
+    top: 0px;
+    right: -16px;
+    width: 110px;
+    height: 65px;
+    border-radius: 16px;
+    background-color: #FFA159;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog_promotion p {
+    font-family: "AAStetica";
+    font-weight: 500;
+    font-size: 32px;
+    color: #000;
+}
+
+.arrow_down {
+    margin-top: 48px;
+    margin-left: 660px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #E1BADF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow_down:hover {
+    cursor: pointer;
+    background-color: #D5DB84;
+}
+
+/* catalog end */
+/* footer start */
+.footer {
+    background-color: #F1F1F1;
+    padding: 60px 0;
+}
+
+.footer_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_content h2 {
+    font-family: "AAStetica";
+    font-weight: 400;
+    font-size: 28px;
+    color: #A1A1A1;
+}
+
+/* footer end */
+
+@media (max-width: 768px) {
+    .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+        padding: 20px 0;
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .header_content {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .banner_info {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .banner_text {
+        width: 100%;
+        padding: 0 16px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner_text h1 {
+        font-size: 48px;
+    }
+
+    .banner_btn {
+        width: 100%;
+        font-size: 28px;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner_info {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .banner_btn {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .banner_img {
+        width: 80%;
+        max-width: 500px;
+        margin-top: 20px;
+    }
+
+    .popular_cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .pop_card {
+        width: 100%;
+        max-width: 424px;
+    }
+
+    .promotions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .prom_leftcontent,
+    .prom_rightcontent {
+        width: 100%;
+        max-width: 627px;
+    }
+
+    .catalog_search_sort {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .catalog_searchbar {
+        width: 100%;
+    }
+
+    .catalog_sorting {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog_cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog_cards_row1,
+    .catalog_cards_row2 {
+        flex-direction: column;
+    }
+
+    .catalog_card {
+        width: 100%;
+        max-width: 424px;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 500px;
+    }
+
+    .banner_btn {
+        font-size: 20px;
+    }
+
+    .banner_img {
+        width: 70%;
+        max-width: 400px;
+        margin-top: 15px;
+    }
+
+
+    .banner_text h1 {
+        font-size: 32px;
+    }
+
+    .banner_btn {
+        font-size: 24px;
+        width: 80%;
+    }
+
+    .header_content {
+        gap: 10px;
+    }
+
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .title a {
+        font-size: 18px;
+    }
+
+    .popular_cards {
+        gap: 20px;
+    }
+
+    .pop_card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .catalog_search_sort {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cat_search_input {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .filter_btn,
+    .sort_btn {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .catalog_cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer_content h2 {
+        font-size: 24px;
+    }
+}

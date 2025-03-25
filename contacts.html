@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лапочка - контакты</title>
+    <link rel="stylesheet" href="assets/css/contacts.css">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="header">
+        <header class="container">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="assets/images/header/logo.png" alt="">
+                </div>
+            </a>
+
+            <input type="checkbox" id="burger">
+            <label for="burger">
+                <span></span>
+            </label>
+
+            <nav>
+                <a href="about.html">о нас</a>
+                <a href="contacts.html">контакты</a>
+                <a href="catalog.html">каталог</a>
+            </nav>
+
+            <div class="header_content">
+
+
+                <div class="icons">
+                    <div class="icon">
+                        <img src="assets/images/header/icon1.png" alt="">
+                    </div>
+
+                    <a href="bag.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon2.png" alt="">
+                        </div>
+                    </a>
+
+                    <a href="account.html">
+                        <div class="icon">
+                            <img src="assets/images/header/icon3.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- header end -->
+
+    <div class="href container">
+        <a href="index.html">главная</a>
+        <p>/</p>
+        <a href=""><span>контакты</span></a>
+    </div>
+
+    <!-- contacts start -->
+    <main class="contacts-page container">
+        <h1>Контакты</h1>
+
+        <section class="contact-info">
+            <div class="contact-card">
+                <h2>Адрес</h2>
+                <p>г. Казань, ул. Пушкина, д. 10</p>
+            </div>
+
+            <div class="contact-card">
+                <h2>Телефон</h2>
+                <a href="tel:+7 937 773 57 27">8 937 773 57 27</a>
+            </div>
+
+            <div class="contact-card">
+                <h2>Email</h2>
+                <a href="mailto:info@lapochka.ru">info@lapochka.ru</a>
+            </div>
+
+            <div class="contact-card">
+                <h2>Режим работы</h2>
+                <p>Пн-Пт: 9:00 - 18:00</p>
+                <p>Сб-Вс: 10:00 - 16:00</p>
+            </div>
+        </section>
+
+        <section class="map">
+            <h2>Мы на карте</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.325123317907!2d49.10875731593176!3d55.79643298056268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead1e1e5d8f0f%3A0x4a7c4d9e0d1b3b1b!2z0J_RgNC40LzQvtGA0YHQutC40Lkg0L_RgNC-0YHQv9C10LrRgiDQkNC60YLQvtC_0L7Qu9C40YfQtdGB0LrQuNC5INC_0LXRgC4sIDEwLCDQmtCw0LfQsNC90YwsINCg0LXRgdC_LiDQotCw0L3QvtC8LCDQoNC10YHQvy4g0KLQsNC90L7QvCwgNDIwMTEx!5e0!3m2!1sru!2sru!4v1623761234567!5m2!1sru!2sru"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+    <!-- contacts end -->
+
+    <!-- footer start -->
+    <div class="footer my-120">
+        <div class="footer_content container">
+            <h2>Рогожина Виктория 2025 год</h2>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("loaded");
+        });
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                let href = this.href;
+                document.body.style.opacity = "0";
+                setTimeout(() => window.location.href = href, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>
